@@ -1,0 +1,1258 @@
+{
+    "qualitativeInterviewFramework": [
+        {
+            "role": "Software Engineer (Backend)",
+            "levels": [
+                {
+                    "level": "Junior",
+                    "competencyAreas": [
+                        {
+                            "competency": "Foundational Programming & Problem Solving",
+                            "qualitativeQuestionExamples": [
+                                "Walk me through how you would design a simple API endpoint for a 'user registration' feature. What considerations would you make for data validation and basic error handling?",
+                                "Describe a small coding project where you faced a significant bug. How did you diagnose it, what steps did you take to fix it, and what did you learn?",
+                                "You're given a dataset and asked to write a program to perform a specific operation (e.g., find unique elements, sort a list). How do you approach breaking down the problem, choosing data structures, and ensuring your code is correct?"
+                            ],
+                            "whatInterviewerLooksFor": "Clarity of thought, logical progression, understanding of basic data structures and algorithms, ability to articulate debugging steps, learning from mistakes, clean code principles, basic understanding of API concepts (input/output, status codes)."
+                        },
+                        {
+                            "competency": "Version Control & Collaboration",
+                            "qualitativeQuestionExamples": [
+                                "Describe your experience using Git. Walk me through a common workflow for contributing to a shared codebase (e.g., branching, committing, pull requests).",
+                                "Tell me about a time you had a merge conflict in Git. How did you resolve it?",
+                                "How do you ensure your code integrates smoothly with code written by others on your team?"
+                            ],
+                            "whatInterviewerLooksFor": "Familiarity with Git commands and workflows, ability to resolve common version control issues, understanding of collaborative development practices, communication around code changes."
+                        },
+                        {
+                            "competency": "Learning Agility & Motivation",
+                            "qualitativeQuestionExamples": [
+                                "What's a new technology or programming concept you've recently learned outside of formal education? Why did you choose to learn it, and how did you go about it?",
+                                "What kind of feedback do you find most helpful, and how do you act on it?",
+                                "What excites you about backend development, and what areas are you most keen to grow in?"
+                            ],
+                            "whatInterviewerLooksFor": "Proactive learning, curiosity, self-awareness, ability to articulate learning processes, genuine interest in the domain, openness to feedback and self-improvement."
+                        }
+                    ]
+                },
+                {
+                    "level": "Mid-Level",
+                    "competencyAreas": [
+                        {
+                            "competency": "API Design & Distributed Systems Basics",
+                            "qualitativeQuestionExamples": [
+                                "You need to design a new set of APIs for a service that handles user preferences. Walk me through your design considerations for RESTfulness, error handling, authentication, and potential future scalability.",
+                                "Describe a situation where you had to debug an issue spanning multiple services or components. What was your systematic approach?",
+                                "When would you consider introducing a message queue (e.g., Kafka, RabbitMQ) into a backend system? What problems does it solve, and what challenges does it introduce?"
+                            ],
+                            "whatInterviewerLooksFor": "Understanding of API best practices, distributed system concepts (latency, consistency, fault tolerance), systematic debugging skills, ability to justify architectural choices, awareness of trade-offs."
+                        },
+                        {
+                            "competency": "Database Interactions & Data Modeling",
+                            "qualitativeQuestionExamples": [
+                                "Tell me about a time you had to optimize a slow database query or a bottleneck in data access. What was the problem, how did you identify it, and what was your solution?",
+                                "Describe a scenario where you chose a NoSQL database over a relational one (or vice-versa). What were the deciding factors and trade-offs?",
+                                "How do you ensure data integrity and consistency in a backend application, especially when dealing with concurrent requests?"
+                            ],
+                            "whatInterviewerLooksFor": "Database performance tuning experience, understanding of different database paradigms, knowledge of ACID/BASE properties, concurrent programming considerations, practical experience with schema design and optimization."
+                        },
+                        {
+                            "competency": "Cloud-Native & DevOps Practices",
+                            "qualitativeQuestionExamples": [
+                                "Describe your experience deploying and managing backend services in a cloud environment (e.g., AWS, Azure, GCP). What services did you use, and what challenges did you face?",
+                                "How do you approach ensuring your backend services are highly available and resilient to failures?",
+                                "Tell me about your experience with CI/CD pipelines for backend applications. What steps do you consider crucial for reliable deployments?"
+                            ],
+                            "whatInterviewerLooksFor": "Practical cloud experience, understanding of cloud services (EC2, Lambda, RDS, S3, etc.), familiarity with concepts like load balancing, auto-scaling, monitoring, CI/CD tools and practices (e.g., Jenkins, GitHub Actions)."
+                        },
+                        {
+                            "competency": "Collaboration & Mentorship",
+                            "qualitativeQuestionExamples": [
+                                "Describe a time you had a technical disagreement with a teammate. How did you handle it, and what was the outcome?",
+                                "How do you share knowledge or mentor junior developers on your team?",
+                                "Tell me about a project where you had to compromise on a technical ideal due to business constraints. How did you navigate that?"
+                            ],
+                            "whatInterviewerLooksFor": "Conflict resolution skills, ability to articulate technical arguments, empathy, mentorship potential, pragmatism in decision-making, understanding of business context."
+                        }
+                    ]
+                },
+                {
+                    "level": "Senior/Lead/Architect",
+                    "competencyAreas": [
+                        {
+                            "competency": "Large-Scale System Architecture & Design",
+                            "qualitativeQuestionExamples": [
+                                "Design a system for [large-scale problem, e.g., a global ride-sharing service, a real-time fraud detection platform]. Walk me through your architectural choices, including data storage, communication protocols, scalability, fault tolerance, and security considerations. Discuss trade-offs.",
+                                "Tell me about a significant architectural decision you made that had a lasting impact (positive or negative) on a product. What was the situation, how did you evaluate options, and what were the outcomes?",
+                                "How do you handle consistency (strong vs. eventual) in a highly distributed system, especially when data is sharded or replicated across regions?"
+                            ],
+                            "whatInterviewerLooksFor": "Deep understanding of distributed systems patterns, ability to reason about complex trade-offs (CAP theorem, consistency models), experience with various architectural styles (microservices, event-driven, serverless), security by design, cross-cutting concerns, scalability strategies (sharding, caching, load balancing, queuing)."
+                        },
+                        {
+                            "competency": "Technical Strategy & Roadmap",
+                            "qualitativeQuestionExamples": [
+                                "How do you approach creating a technical roadmap for a product or platform? What factors do you consider, and how do you prioritize initiatives?",
+                                "Describe a time you had to sunset a significant piece of legacy infrastructure or refactor a core system. What was your strategy, and how did you manage the risk?",
+                                "How do you measure the success of architectural initiatives or platform improvements beyond just uptime?"
+                            ],
+                            "whatInterviewerLooksFor": "Strategic thinking, long-term vision, understanding of technical debt management, change management skills, ability to define and track engineering KPIs, risk assessment and mitigation."
+                        },
+                        {
+                            "competency": "Emerging Tech & Innovation (Backend Focus)",
+                            "qualitativeQuestionExamples": [
+                                "How do you envision Generative AI or Large Language Models (LLMs) impacting backend development in the next 5 years, particularly for areas like API generation, code optimization, or data synthesis? What are the challenges of integrating these?",
+                                "Discuss a scenario where you might consider adopting Web3/blockchain technologies for a backend use case. What are the practical benefits and significant hurdles?",
+                                "How do you evaluate new backend technologies or cloud services (e.g., new database types, new serverless paradigms, edge computing platforms) for adoption? What criteria are most important?",
+                                "What are the challenges of real-time machine learning inference at scale on the backend, and what solutions have you explored (e.g., specialized hardware, optimized serving patterns)?",
+                                "How do you approach ensuring data privacy and ethical AI use within your backend systems, especially when dealing with sensitive user data and AI models?"
+                            ],
+                            "whatInterviewerLooksFor": "Forward-thinking mindset, critical evaluation of emerging tech hype vs. practical application, awareness of ethical implications, understanding of performance and cost implications of new tech, ability to connect new tech to business problems."
+                        },
+                        {
+                            "competency": "Leadership, Mentorship & Cross-Functional Collaboration",
+                            "qualitativeQuestionExamples": [
+                                "Tell me about a time you had to resolve a major technical conflict between multiple senior engineers or teams. What was your role, and what was the outcome?",
+                                "How do you build and foster a high-performing engineering culture that emphasizes ownership, quality, and continuous improvement?",
+                                "Describe a time you successfully influenced product or business strategy through technical insights.",
+                                "What's your approach to hiring and developing technical talent, particularly for senior roles?",
+                                "How do you manage expectations and communicate complex technical challenges or trade-offs to non-technical stakeholders (e.g., product managers, executives)?"
+                            ],
+                            "whatInterviewerLooksFor": "Demonstrated leadership, conflict resolution, strategic influence, talent development, strong communication skills (technical and non-technical), empathy, ability to inspire and motivate teams."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "Software Engineer (Frontend)",
+            "levels": [
+                {
+                    "level": "Junior",
+                    "competencyAreas": [
+                        {
+                            "competency": "Foundational Web & UI Development",
+                            "qualitativeQuestionExamples": [
+                                "Imagine you're building a simple 'to-do list' application using HTML, CSS, and JavaScript. Walk me through how you'd structure the files, handle user input, and update the UI dynamically.",
+                                "Describe a time you styled a webpage that didn't look right. How did you debug the CSS and achieve the desired layout?",
+                                "You're making an API call from the frontend to fetch data. How do you handle the different states of the request (loading, success, error) and display them to the user?"
+                            ],
+                            "whatInterviewerLooksFor": "Understanding of core web technologies, ability to build basic interactive UIs, debugging skills (developer tools), handling asynchronous operations, user feedback mechanisms."
+                        },
+                        {
+                            "competency": "Responsive Design & Accessibility",
+                            "qualitativeQuestionExamples": [
+                                "Explain the concept of responsive web design. How do you ensure your web pages look good on different screen sizes?",
+                                "Why is web accessibility important? Describe a small change you might make to a website to improve its accessibility for users with disabilities.",
+                                "Tell me about a time you used semantic HTML. Why is it beneficial?"
+                            ],
+                            "whatInterviewerLooksFor": "Awareness of user experience across devices, understanding of CSS media queries, commitment to inclusive design, knowledge of basic ARIA attributes or semantic HTML tags."
+                        }
+                    ]
+                },
+                {
+                    "level": "Mid-Level",
+                    "competencyAreas": [
+                        {
+                            "competency": "Component-Based Architecture & State Management",
+                            "qualitativeQuestionExamples": [
+                                "You're tasked with building a complex form with many input fields and dynamic validation. How would you structure this using a component-based framework (e.g., React, Vue, Angular)? How would you manage its state?",
+                                "Describe a scenario where a Redux-like state management solution would be more beneficial than local component state. What are its complexities?",
+                                "How do you ensure good performance in a single-page application (SPA) with many interactive elements? What techniques do you employ (e.g., memoization, lazy loading)?"
+                            ],
+                            "whatInterviewerLooksFor": "In-depth knowledge of a modern frontend framework, understanding of state management patterns and their trade-offs, performance optimization techniques (rendering, network), component lifecycle knowledge."
+                        },
+                        {
+                            "competency": "Frontend Tooling & Build Processes",
+                            "qualitativeQuestionExamples": [
+                                "Walk me through the typical build process for a modern frontend application (e.g., using Webpack, Vite). What are the key steps and tools involved?",
+                                "How do you approach setting up automated tests (unit, integration, E2E) for a new frontend feature? What tools do you prefer?",
+                                "Describe your experience with bundling and code splitting for large frontend applications. Why are these important?"
+                            ],
+                            "whatInterviewerLooksFor": "Familiarity with bundlers, transpilers, task runners, testing frameworks (Jest, React Testing Library, Cypress), understanding of build optimization, CI/CD for frontend."
+                        },
+                        {
+                            "competency": "Emerging Tech & UX Enhancement (Frontend Focus)",
+                            "qualitativeQuestionExamples": [
+                                "How can you leverage browser APIs (e.g., Web Workers, Service Workers, WebSockets) to enhance the user experience and performance of a web application? Give an example.",
+                                "Discuss a potential use case where integrating an AI/ML API (e.g., for sentiment analysis, image generation, voice commands) into the frontend would create a compelling user experience. What are the integration challenges?",
+                                "What's your perspective on Progressive Web Apps (PWAs)? Describe a feature you would implement for a PWA and why."
+                            ],
+                            "whatInterviewerLooksFor": "Awareness of modern browser capabilities, creativity in applying emerging tech to UX problems, understanding of API integration challenges, PWA principles (offline support, installability, push notifications)."
+                        }
+                    ]
+                },
+                {
+                    "level": "Senior/Lead/Architect",
+                    "competencyAreas": [
+                        {
+                            "competency": "Frontend Architecture & Scalability",
+                            "qualitativeQuestionExamples": [
+                                "Design the frontend architecture for a large-scale, enterprise-level application with multiple teams contributing. How would you handle code organization, shared components, styling, and deployment strategies?",
+                                "Discuss the pros and cons of micro-frontends. When would you recommend this approach, and what challenges does it introduce?",
+                                "How do you define and measure the success of frontend performance from a business and user perspective? What metrics and tools do you use?",
+                                "Tell me about a time you led a significant frontend migration (e.g., from an older framework to a newer one, or from client-side rendering to SSR). What was your strategy, and what were the outcomes?"
+                            ],
+                            "whatInterviewerLooksFor": "Architectural foresight, understanding of modularization, design systems, performance budgeting, A/B testing, data-driven decision making, experience with large-scale refactoring and migration planning."
+                        },
+                        {
+                            "competency": "Design Systems & Developer Experience",
+                            "qualitativeQuestionExamples": [
+                                "Describe your experience building or contributing to a comprehensive design system. What are the key elements, and how do you ensure its adoption and evolution?",
+                                "How do you balance the needs of designers, product managers, and backend engineers when building new frontend features or components?",
+                                "What strategies do you employ to improve the developer experience for other frontend engineers on your team (e.g., tooling, documentation, onboarding)?"
+                            ],
+                            "whatInterviewerLooksFor": "Experience with shared component libraries, collaboration across disciplines, commitment to developer productivity, strong documentation practices, standardization."
+                        },
+                        {
+                            "competency": "Emerging Tech & Future Vision (Frontend Focus)",
+                            "qualitativeQuestionExamples": [
+                                "How do you see Generative AI influencing the process of UI/UX design and frontend development? Are there ethical considerations or limitations you foresee?",
+                                "Discuss the role of Web3, decentralized identity, or NFTs in the context of user interfaces. When might a decentralized frontend be relevant?",
+                                "What are your thoughts on the impact of WebAssembly (Wasm) on frontend applications, particularly for performance-critical or computationally intensive tasks?",
+                                "How do you design and implement highly personalized user experiences driven by real-time data and potentially AI models on the frontend?",
+                                "What's your approach to integrating cutting-edge accessibility standards and features, potentially leveraging AI, into your frontend applications?"
+                            ],
+                            "whatInterviewerLooksFor": "Visionary thinking, ability to translate emerging tech into practical frontend applications, understanding of new security/privacy concerns, deep knowledge of performance implications, ethical design considerations."
+                        },
+                        {
+                            "competency": "Leadership & Team Enablement",
+                            "qualitativeQuestionExamples": [
+                                "Tell me about a time you mentored a team of frontend engineers through a particularly challenging technical problem or project.",
+                                "How do you foster a culture of technical excellence, code quality, and continuous learning within a frontend team?",
+                                "Describe a situation where you had to advocate for a significant frontend investment (e.g., a new framework, a performance initiative) to executive leadership. How did you build your case?",
+                                "What are the biggest challenges in scaling a frontend organization, and how do you address them?"
+                            ],
+                            "whatInterviewerLooksFor": "Leadership experience, coaching and mentoring skills, strategic influence, business acumen (tying tech to ROI), organizational scaling challenges, team motivation and empowerment."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "Data Scientist",
+            "levels": [
+                {
+                    "level": "Junior",
+                    "competencyAreas": [
+                        {
+                            "competency": "Foundational ML & Statistics",
+                            "qualitativeQuestionExamples": [
+                                "Explain the concept of 'overfitting' and 'underfitting' in machine learning. How do you identify them, and what are basic ways to mitigate them?",
+                                "Describe the steps you would take to prepare a messy, real-world dataset for a simple classification task.",
+                                "What's the difference between supervised and unsupervised learning? Give an example of a problem that fits each paradigm.",
+                                "You've built a simple regression model, and a stakeholder asks you to explain what the 'R-squared' value means. How would you explain it simply?"
+                            ],
+                            "whatInterviewerLooksFor": "Understanding of core ML concepts, data cleaning/preprocessing steps, statistical intuition, ability to explain complex concepts clearly, awareness of model evaluation metrics."
+                        },
+                        {
+                            "competency": "Experimentation & Problem Framing",
+                            "qualitativeQuestionExamples": [
+                                "Tell me about a small data science project you worked on (academic or personal). What was the problem you were trying to solve, what data did you use, and what was your approach?",
+                                "How do you frame a business problem as a data science problem? Give an example.",
+                                "Describe a time you had to deal with a dataset that was too small or lacked sufficient features. How did you proceed?"
+                            ],
+                            "whatInterviewerLooksFor": "Problem-solving mindset, ability to translate business needs into data science tasks, creativity in data acquisition/feature engineering, awareness of data limitations."
+                        }
+                    ]
+                },
+                {
+                    "level": "Mid-Level",
+                    "competencyAreas": [
+                        {
+                            "competency": "Advanced ML & Modeling",
+                            "qualitativeQuestionExamples": [
+                                "Explain the inner workings of a Gradient Boosting Machine (GBM) or Random Forest. What are their strengths and weaknesses, and when would you choose one over a simpler model like Logistic Regression?",
+                                "You're tasked with building a recommendation system. Describe different approaches you might take (e.g., collaborative filtering, content-based, hybrid) and discuss their pros and cons.",
+                                "How do you handle imbalanced datasets in classification problems? Describe different techniques and when to apply them.",
+                                "Discuss the concept of 'model interpretability' or Explainable AI (XAI). Why is it important, and what tools/techniques have you used?"
+                            ],
+                            "whatInterviewerLooksFor": "Deep understanding of various ML algorithms, ability to select appropriate models based on problem context, expertise in handling data challenges (imbalance, high dimensionality), commitment to model transparency."
+                        },
+                        {
+                            "competency": "Experimental Design & A/B Testing",
+                            "qualitativeQuestionExamples": [
+                                "Design an A/B test to evaluate the impact of a new feature on user engagement. What metrics would you track, how would you determine sample size, and how would you interpret the results?",
+                                "Tell me about a time an A/B test yielded unexpected or contradictory results. How did you investigate and what did you conclude?",
+                                "How do you ensure the validity and statistical significance of your experiments?"
+                            ],
+                            "whatInterviewerLooksFor": "Strong grasp of experimental design principles, statistical rigor, ability to troubleshoot experimental issues, data-driven decision-making, understanding of causality vs. correlation."
+                        },
+                        {
+                            "competency": "Emerging Tech & MLOps Basics",
+                            "qualitativeQuestionExamples": [
+                                "Describe your experience deploying a machine learning model into a production environment. What were the challenges, and what tools did you use?",
+                                "How do you monitor the performance of a deployed ML model over time? What might cause it to degrade, and how would you detect it?",
+                                "Have you explored working with Large Language Models (LLMs)? Describe a use case or challenge you encountered, even in a personal project.",
+                                "What's your understanding of 'feature stores' in an ML context? Why are they becoming important?"
+                            ],
+                            "whatInterviewerLooksFor": "Awareness of the ML lifecycle beyond modeling (deployment, monitoring), understanding of data/concept drift, curiosity about new ML paradigms (LLMs, Generative AI), basic MLOps concepts."
+                        },
+                        {
+                            "competency": "Communication & Business Impact",
+                            "qualitativeQuestionExamples": [
+                                "Tell me about a time you had to explain a complex machine learning concept or model finding to a non-technical audience (e.g., marketing, sales, executives). How did you tailor your explanation?",
+                                "Describe a project where your data science insights led to a direct business impact. What was the problem, your solution, and the measurable outcome?",
+                                "How do you handle situations where stakeholders have unrealistic expectations about what machine learning can achieve?"
+                            ],
+                            "whatInterviewerLooksFor": "Excellent communication skills (verbal and written), ability to translate technical findings into business value, stakeholder management, realistic understanding of ML capabilities."
+                        }
+                    ]
+                },
+                {
+                    "level": "Senior/Lead/Principal",
+                    "competencyAreas": [
+                        {
+                            "competency": "ML System Design & Scalability",
+                            "qualitativeQuestionExamples": [
+                                "Design an end-to-end machine learning system for [complex problem, e.g., real-time content moderation, personalized news feed]. Detail the data ingestion, feature engineering, model training, serving, and monitoring components. Discuss scalability and latency.",
+                                "Tell me about a time you designed and implemented a custom machine learning model or algorithm to solve a unique business problem where off-the-shelf solutions weren't sufficient.",
+                                "How do you manage the lifecycle of machine learning models in production, from versioning and retraining to A/B testing multiple models simultaneously?"
+                            ],
+                            "whatInterviewerLooksFor": "Holistic view of ML systems, deep expertise in model design and implementation, MLOps maturity (CI/CD for ML, model governance), ability to design for scale and resilience."
+                        },
+                        {
+                            "competency": "Strategic Data Science & Product Alignment",
+                            "qualitativeQuestionExamples": [
+                                "How do you translate high-level business objectives into concrete data science initiatives and a measurable roadmap?",
+                                "Describe a time you had to make a significant trade-off between model performance/accuracy and other factors like interpretability, latency, or cost. How did you justify your decision?",
+                                "How do you identify new opportunities for applying data science or machine learning that will drive significant business value?",
+                                "Discuss your experience with data governance, data privacy (e.g., GDPR, CCPA), and ethical AI principles in large-scale data science projects."
+                            ],
+                            "whatInterviewerLooksFor": "Strategic thinking, business acumen, ability to influence product roadmap, pragmatic decision-making, strong ethical compass, knowledge of data regulations."
+                        },
+                        {
+                            "competency": "Emerging Tech & Research Vision (Data Science Focus)",
+                            "qualitativeQuestionExamples": [
+                                "What's your perspective on the latest advancements in Generative AI (e.g., multimodal models, diffusion models)? How do you see them transforming industries, and where are the biggest challenges in applying them in practice?",
+                                "Discuss the concept of 'Foundation Models' and their implications for future AI development. How might they change the way data scientists work?",
+                                "How do you approach fairness, accountability, and transparency (FAT) in AI systems, especially with emerging complex models? Describe a concrete example where you addressed bias.",
+                                "What are the challenges and opportunities of implementing Federated Learning or other privacy-preserving AI techniques in a real-world scenario?",
+                                "How do you stay at the forefront of AI research while also delivering practical, production-ready solutions?"
+                            ],
+                            "whatInterviewerLooksFor": "Deep knowledge of cutting-edge AI, critical evaluation of research, practical application foresight, strong commitment to responsible AI, continuous learning, ability to bridge research and production."
+                        },
+                        {
+                            "competency": "Leadership, Mentorship & Cross-Functional Influence",
+                            "qualitativeQuestionExamples": [
+                                "Tell me about a time you mentored a data scientist who was struggling with a complex model or a challenging stakeholder. What was your approach?",
+                                "How do you foster a culture of data literacy and experimentation across an organization?",
+                                "Describe a situation where you had to onboard a new data science team or significantly grow an existing one. What were your strategies?",
+                                "How do you manage conflicting priorities between research, product, and engineering teams in a data science organization?",
+                                "What's your philosophy on building high-performing data science teams that deliver measurable impact?"
+                            ],
+                            "whatInterviewerLooksFor": "Proven leadership, mentorship skills, ability to build and scale teams, influence across functions, strong communication and negotiation, strategic vision for data science."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "DevOps Engineer / Site Reliability Engineer (SRE)",
+            "levels": [
+                {
+                    "level": "Junior",
+                    "competencyAreas": [
+                        {
+                            "competency": "Linux/OS Fundamentals & Scripting",
+                            "qualitativeQuestionExamples": [
+                                "Describe a common Linux command you use frequently and explain its purpose and options.",
+                                "Walk me through the steps you would take to troubleshoot a 'service not running' error on a Linux server.",
+                                "Tell me about a small script you wrote to automate a repetitive task. What problem did it solve?"
+                            ],
+                            "whatInterviewerLooksFor": "Basic command-line proficiency, understanding of OS concepts (processes, services, logs), scripting ability (Bash, Python), systematic troubleshooting."
+                        },
+                        {
+                            "competency": "Networking & Basic Cloud Concepts",
+                            "qualitativeQuestionExamples": [
+                                "Explain the difference between `ping` and `traceroute`. When would you use each to diagnose a network issue?",
+                                "What's your understanding of what a 'firewall' does? How does it protect a system?",
+                                "Describe a time you used a cloud service (e.g., spinning up a VM, using S3). What was the purpose?"
+                            ],
+                            "whatInterviewerLooksFor": "Fundamental networking knowledge (TCP/IP, ports), awareness of security basics, basic cloud service familiarity, ability to articulate concepts simply."
+                        },
+                        {
+                            "competency": "Version Control & Collaboration",
+                            "qualitativeQuestionExamples": [
+                                "Why is version control important in an infrastructure context, not just for code?",
+                                "Describe your experience with Git and its importance in collaborative development and operations.",
+                                "Tell me about a time you used a configuration file for a tool or service. Why are they important?"
+                            ],
+                            "whatInterviewerLooksFor": "Understanding of configuration management principles, Git proficiency, appreciation for collaborative and auditable changes."
+                        }
+                    ]
+                },
+                {
+                    "level": "Mid-Level",
+                    "competencyAreas": [
+                        {
+                            "competency": "CI/CD & Automation",
+                            "qualitativeQuestionExamples": [
+                                "Walk me through the typical stages of a CI/CD pipeline for a web application. What tools would you use at each stage, and why?",
+                                "Describe a time you automated a complex deployment process. What challenges did you face, and how did you overcome them?",
+                                "How do you ensure the quality and reliability of your automated deployments? What kind of tests or checks do you build in?"
+                            ],
+                            "whatInterviewerLooksFor": "In-depth knowledge of CI/CD principles, practical experience with tools (Jenkins, GitLab CI, GitHub Actions, Azure DevOps), understanding of testing in pipelines, release engineering concepts."
+                        },
+                        {
+                            "competency": "Containerization & Orchestration",
+                            "qualitativeQuestionExamples": [
+                                "Explain how Docker works at a high level. Describe a scenario where using Docker would be highly beneficial.",
+                                "Have you worked with Kubernetes? Describe a common Kubernetes resource (e.g., Pod, Deployment, Service) and its purpose.",
+                                "What are the challenges of managing stateful applications in a containerized environment, and how do you address them?"
+                            ],
+                            "whatInterviewerLooksFor": "Strong Docker fundamentals, basic Kubernetes understanding, awareness of containerization challenges (networking, storage, logging), practical experience with container orchestration."
+                        },
+                        {
+                            "competency": "Monitoring, Logging & Observability",
+                            "qualitativeQuestionExamples": [
+                                "How do you monitor the health and performance of a distributed application in production? What metrics do you prioritize, and what tools do you use?",
+                                "Describe your approach to centralized logging. Why is it important, and what insights do you look for in logs?",
+                                "Explain the concept of 'observability' and its three pillars (logs, metrics, traces). How do they differ from traditional monitoring?"
+                            ],
+                            "whatInterviewerLooksFor": "Understanding of monitoring tools (Prometheus, Grafana, Datadog), logging platforms (ELK, Splunk, Loki), tracing concepts (Jaeger, Zipkin), proactive incident detection, root cause analysis."
+                        },
+                        {
+                            "competency": "Infrastructure as Code (IaC) & Configuration Management",
+                            "qualitativeQuestionExamples": [
+                                "Describe your experience with an IaC tool like Terraform or CloudFormation. Walk me through a resource you defined using IaC.",
+                                "When would you use a configuration management tool (e.g., Ansible, Chef, Puppet) versus an IaC tool? What are their distinct purposes?",
+                                "How do you manage secrets and sensitive configuration data in your IaC and CI/CD pipelines securely?"
+                            ],
+                            "whatInterviewerLooksFor": "Practical IaC experience, understanding of declarative vs. imperative infrastructure, knowledge of configuration management principles, security best practices for credentials."
+                        },
+                        {
+                            "competency": "Cloud-Native Architecture & Principles",
+                            "qualitativeQuestionExamples": [
+                                "Discuss the advantages and disadvantages of serverless computing (e.g., AWS Lambda, Azure Functions) for DevOps. When would you recommend it?",
+                                "How do you ensure high availability and disaster recovery for applications deployed in the cloud?",
+                                "What's your understanding of a 'service mesh' (e.g., Istio, Linkerd)? When would it be beneficial in a microservices architecture?"
+                            ],
+                            "whatInterviewerLooksFor": "Understanding of cloud-native patterns, resilience engineering, cloud service selection, network architecture in cloud, awareness of advanced cloud tools."
+                        }
+                    ]
+                },
+                {
+                    "level": "Senior/Lead/Architect",
+                    "competencyAreas": [
+                        {
+                            "competency": "Resilience, Reliability & SRE Principles",
+                            "qualitativeQuestionExamples": [
+                                "Design a highly available and fault-tolerant system for a critical application that must have five nines (99.999%) uptime. Detail your strategies for redundancy, failover, disaster recovery, and data replication.",
+                                "How do you define and measure 'reliability' within a production system? Discuss Service Level Objectives (SLOs) and Service Level Indicators (SLIs).",
+                                "Describe your experience with Chaos Engineering. Why is it important, and how would you implement it in an organization?",
+                                "Tell me about a major production incident you were responsible for. Walk me through your entire process, from detection to resolution to post-mortem analysis and prevention."
+                            ],
+                            "whatInterviewerLooksFor": "Deep expertise in SRE principles, strong understanding of distributed system reliability, practical experience with disaster recovery, robust incident management, post-mortem culture, proactive reliability practices."
+                        },
+                        {
+                            "competency": "DevOps Strategy & Organizational Impact",
+                            "qualitativeQuestionExamples": [
+                                "How do you drive a culture of 'You Build It, You Run It' and shared ownership within engineering teams?",
+                                "Discuss your experience leading or guiding teams through a significant cloud migration or a transition to a new operational paradigm (e.g., from VMs to Kubernetes). What were the organizational and technical challenges?",
+                                "How do you balance the need for rapid feature delivery with the stability, security, and operational health of production systems?",
+                                "What strategies do you employ for cost optimization in a large-scale cloud environment (FinOps)?",
+                                "How do you evaluate and introduce new DevOps tools or practices to an organization? What's your change management approach?"
+                            ],
+                            "whatInterviewerLooksFor": "Strategic thinking, cultural change agent, large-scale migration experience, trade-off analysis (speed vs. stability), cost awareness, strong influencing skills, proven ability to drive adoption."
+                        },
+                        {
+                            "competency": "Emerging Tech & Future of Operations",
+                            "qualitativeQuestionExamples": [
+                                "What's your vision for AIOps? How can AI/ML be leveraged to improve incident response, predictive analytics, and operational efficiency?",
+                                "Discuss the security implications of the software supply chain (e.g., container images, dependencies) in a modern DevOps setup. How do you mitigate these risks?",
+                                "How do you approach managing and orchestrating edge devices or IoT infrastructure in a scalable and secure manner?",
+                                "What are your thoughts on GitOps? Describe a scenario where it would be particularly effective.",
+                                "How do you see technologies like WebAssembly (Wasm) or eBPF impacting the future of cloud-native operations and observability?"
+                            ],
+                            "whatInterviewerLooksFor": "Forward-looking perspective, understanding of advanced security concepts, practical knowledge of GitOps, awareness of emerging operational paradigms (AIOps, edge), ability to assess new tech impact."
+                        },
+                        {
+                            "competency": "Leadership & Mentorship",
+                            "qualitativeQuestionExamples": [
+                                "Tell me about a time you mentored a junior DevOps engineer or SRE who was facing a complex operational problem. What was your approach to guiding them?",
+                                "How do you build and scale a high-performing DevOps/SRE team? What qualities do you look for?",
+                                "Describe a situation where you had to push back on a business or product request due to operational risks. How did you communicate and resolve the conflict?",
+                                "What's your philosophy on documentation, runbooks, and knowledge sharing in an operations team?",
+                                "How do you measure the impact and value that a DevOps/SRE team brings to an organization?"
+                            ],
+                            "whatInterviewerLooksFor": "Strong leadership, coaching and development skills, ability to manage conflict, clear communication of risks, commitment to operational excellence, quantifiable impact on business."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "Cybersecurity Analyst",
+            "levels": [
+                {
+                    "level": "Junior",
+                    "competencyAreas": [
+                        {
+                            "competency": "Security Fundamentals & Concepts",
+                            "qualitativeQuestionExamples": [
+                                "Explain the CIA triad (Confidentiality, Integrity, Availability) with real-world examples.",
+                                "Describe a common cyber attack (e.g., phishing, malware, DDoS) in simple terms. How would you explain it to a non-technical user?",
+                                "What's the purpose of a firewall? How does it help secure a network?",
+                                "Why is strong password hygiene important? What are some common mistakes people make with passwords?"
+                            ],
+                            "whatInterviewerLooksFor": "Basic understanding of security principles, ability to explain concepts clearly, awareness of common threats, emphasis on user education."
+                        },
+                        {
+                            "competency": "Threat Identification & Basic Incident Response",
+                            "qualitativeQuestionExamples": [
+                                "You receive an email that looks suspicious. Walk me through the steps you would take to determine if it's a phishing attempt.",
+                                "Describe a time you encountered a security alert (even a simulated one). What was your immediate response?",
+                                "What's the difference between a vulnerability and a threat? Give an example of each."
+                            ],
+                            "whatInterviewerLooksFor": "Systematic approach to suspicious activity, understanding of basic incident response steps (identify, contain, eradicate), clear definitions of security terms."
+                        },
+                        {
+                            "competency": "Learning & Awareness",
+                            "qualitativeQuestionExamples": [
+                                "How do you stay updated on the latest cybersecurity threats, vulnerabilities, and news?",
+                                "What aspect of cybersecurity excites you the most, and why?",
+                                "Tell me about a time you had to learn a new security tool or concept quickly."
+                            ],
+                            "whatInterviewerLooksFor": "Proactive learning, curiosity, passion for cybersecurity, ability to adapt to new information."
+                        }
+                    ]
+                },
+                {
+                    "level": "Mid-Level",
+                    "competencyAreas": [
+                        {
+                            "competency": "Threat Analysis & Vulnerability Management",
+                            "qualitativeQuestionExamples": [
+                                "You're reviewing a security alert from your SIEM system indicating unusual login activity. Walk me through your investigation process, what data sources you'd consult, and what your next steps would be.",
+                                "Describe your experience performing vulnerability assessments. What tools and methodologies do you prefer, and how do you prioritize findings?",
+                                "Explain the concept of 'defense in depth' in cybersecurity. How do you apply it in practice?",
+                                "What are some common security vulnerabilities in web applications, and how do you test for them?"
+                            ],
+                            "whatInterviewerLooksFor": "Systematic threat hunting, practical experience with SIEM/SOAR, vulnerability scanning and pen testing concepts, understanding of layered security, application security awareness."
+                        },
+                        {
+                            "competency": "Incident Response & Forensics",
+                            "qualitativeQuestionExamples": [
+                                "Tell me about a security incident you were directly involved in responding to. What was your role, what actions did you take, and what was the outcome? What lessons were learned?",
+                                "How do you differentiate between a true positive and a false positive in security alerts? Describe a time you investigated a false positive.",
+                                "What steps would you take to preserve evidence after a suspected cyber attack? Why is this crucial?"
+                            ],
+                            "whatInterviewerLooksFor": "Hands-on incident response experience, analytical skills, attention to detail (forensics), ability to follow protocols, learning from incidents."
+                        },
+                        {
+                            "competency": "Cloud Security & Emerging Threats",
+                            "qualitativeQuestionExamples": [
+                                "What are the unique security challenges when deploying applications and data to public cloud environments (e.g., AWS, Azure, GCP) compared to on-premise? How do you address them?",
+                                "Discuss the security implications of containerization (e.g., Docker, Kubernetes). What best practices would you implement?",
+                                "How do you see new technologies like Generative AI influencing the threat landscape? What new attack vectors might emerge, and how would you defend against them?",
+                                "What's your understanding of the Zero Trust security model? How does it differ from traditional perimeter-based security?"
+                            ],
+                            "whatInterviewerLooksFor": "Awareness of cloud security models (shared responsibility), container security, proactive threat intelligence, understanding of Zero Trust principles, critical thinking about future threats."
+                        },
+                        {
+                            "competency": "Security Policy & User Awareness",
+                            "qualitativeQuestionExamples": [
+                                "How do you convince a non-technical user or stakeholder to adopt a critical security practice (e.g., MFA, regular password changes) they might resist?",
+                                "Describe your experience with creating or enforcing security policies within an organization.",
+                                "What's your approach to security awareness training for employees?"
+                            ],
+                            "whatInterviewerLooksFor": "Communication skills, ability to influence, understanding of security policy lifecycle, commitment to user education."
+                        }
+                    ]
+                },
+                {
+                    "level": "Senior/Lead",
+                    "competencyAreas": [
+                        {
+                            "competency": "Security Architecture & Risk Management",
+                            "qualitativeQuestionExamples": [
+                                "Design a comprehensive security architecture for a new enterprise application that handles sensitive customer data. Discuss considerations for network security, application security, data security, identity and access management, and logging/monitoring.",
+                                "How do you establish and maintain a robust security posture across an entire organization? What frameworks or methodologies do you follow (e.g., NIST, ISO 27001)?",
+                                "Discuss your experience with formal risk assessment methodologies. How do you prioritize security risks and communicate them to leadership?",
+                                "Tell me about a time you had to balance competing priorities between security requirements and business agility or innovation. How did you facilitate that decision?"
+                            ],
+                            "whatInterviewerLooksFor": "Architectural thinking, deep knowledge of security frameworks, risk management expertise, strategic decision-making, ability to balance security with business needs."
+                        },
+                        {
+                            "competency": "Advanced Threat Intelligence & Purple Teaming",
+                            "qualitativeQuestionExamples": [
+                                "How do you integrate threat intelligence into your security operations? What sources do you rely on, and how do you operationalize the intelligence?",
+                                "Describe your experience with red teaming or purple teaming exercises. What benefits do they offer, and what challenges have you encountered?",
+                                "What are your strategies for defending against Advanced Persistent Threats (APTs)?",
+                                "How do you ensure the security of the entire software supply chain, from development to deployment, in a modern CI/CD pipeline?"
+                            ],
+                            "whatInterviewerLooksFor": "Proactive security mindset, experience with threat intelligence platforms, practical offensive/defensive security experience, supply chain security knowledge, understanding of complex attack methodologies."
+                        },
+                        {
+                            "competency": "Emerging Tech & Regulatory Landscape",
+                            "qualitativeQuestionExamples": [
+                                "How do you foresee the cybersecurity landscape evolving with the pervasive adoption of AI/ML, especially with the rise of AI-powered attacks and defenses? What new skillsets will be crucial?",
+                                "Discuss the security implications and challenges of widespread adoption of blockchain or decentralized ledger technologies in enterprise or critical infrastructure.",
+                                "What are your concerns regarding the post-quantum cryptography transition? How are you preparing for it?",
+                                "How do you stay informed about and adapt to evolving data privacy regulations (e.g., new aspects of GDPR, CCPA, India's DPDPA) and their impact on security practices?",
+                                "What are the security considerations for securing large-scale IoT deployments or operational technology (OT) environments?"
+                            ],
+                            "whatInterviewerLooksFor": "Future-oriented thinking, deep understanding of emerging tech security implications, regulatory compliance expertise, ability to anticipate and prepare for future threats."
+                        },
+                        {
+                            "competency": "Leadership & Incident Command",
+                            "qualitativeQuestionExamples": [
+                                "Tell me about a time you led the response to a major security breach or a crisis-level incident. What was your role, how did you coordinate, and what was the outcome?",
+                                "How do you build and lead a high-performing security team, fostering a culture of continuous learning and vigilance?",
+                                "Describe your approach to communicating high-stakes security incidents or risks to executive leadership and external stakeholders (e.g., legal, PR).",
+                                "What's your philosophy on technical mentorship and knowledge sharing within a security operations team?",
+                                "How do you measure the effectiveness and ROI of security investments within an organization?"
+                            ],
+                            "whatInterviewerLooksFor": "Demonstrated leadership in high-pressure situations, strong communication and crisis management skills, ability to build and empower teams, strategic influence, business justification for security."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "QA Automation Engineer",
+            "levels": [
+                {
+                    "level": "Junior",
+                    "competencyAreas": [
+                        {
+                            "competency": "Testing Fundamentals & Manual QA",
+                            "qualitativeQuestionExamples": [
+                                "Explain the difference between functional and non-functional testing with examples.",
+                                "Describe the steps you would take to manually test a simple login feature on a website.",
+                                "What is a 'bug report'? What essential information should it contain?",
+                                "How do you ensure you've covered all test cases for a particular feature?"
+                            ],
+                            "whatInterviewerLooksFor": "Understanding of testing types, systematic manual testing process, ability to write clear bug reports, basic test coverage thinking."
+                        },
+                        {
+                            "competency": "Basic Programming & Scripting",
+                            "qualitativeQuestionExamples": [
+                                "Have you written any simple scripts (e.g., in Python, JavaScript) to automate repetitive tasks? Describe one.",
+                                "What's your understanding of how a web browser interacts with a web page when you click a button?",
+                                "Explain the concept of 'variables' and 'conditional statements' in programming."
+                            ],
+                            "whatInterviewerLooksFor": "Basic programming aptitude, logical thinking, ability to apply code to simple automation scenarios."
+                        }
+                    ]
+                },
+                {
+                    "level": "Mid-Level",
+                    "competencyAreas": [
+                        {
+                            "competency": "Test Automation Frameworks & Strategy",
+                            "qualitativeQuestionExamples": [
+                                "Describe your experience with a specific test automation framework (e.g., Selenium, Cypress, Playwright, Appium). Walk me through how you would automate a typical user flow (e.g., 'add item to cart').",
+                                "How do you handle 'flaky' tests in your automation suite? What are common causes, and how do you make them more stable?",
+                                "Discuss different types of automated tests (unit, integration, UI, API) and when you would use each. How do they fit into a CI/CD pipeline?",
+                                "How do you implement data-driven testing in your automation framework?"
+                            ],
+                            "whatInterviewerLooksFor": "Hands-on experience with automation frameworks, debugging skills for automation scripts, understanding of test pyramid, CI/CD integration, data parameterization."
+                        },
+                        {
+                            "competency": "Performance & API Testing",
+                            "qualitativeQuestionExamples": [
+                                "What is the difference between functional and performance testing? Have you had experience with basic performance testing (e.g., load testing tools)?",
+                                "How do you automate testing for RESTful APIs? What tools or libraries do you use?",
+                                "Describe a scenario where API testing is more effective or efficient than UI testing."
+                            ],
+                            "whatInterviewerLooksFor": "Awareness of performance testing concepts, practical API testing experience (Postman, RestAssured), understanding of test efficiency."
+                        },
+                        {
+                            "competency": "Emerging Tech & Quality",
+                            "qualitativeQuestionExamples": [
+                                "How do you approach testing applications that involve real-time data streaming or complex event processing?",
+                                "What are the challenges of automating tests for applications that extensively use dynamic or AI-generated content?",
+                                "Have you explored 'visual regression testing' tools? Describe their benefits.",
+                                "How might Generative AI assist in test case generation or test data creation? What are the limitations?"
+                            ],
+                            "whatInterviewerLooksFor": "Adaptability to complex systems, critical thinking about new testing challenges, awareness of visual testing, understanding of AI's role in QA (opportunities and limitations)."
+                        }
+                    ]
+                },
+                {
+                    "level": "Senior/Lead",
+                    "competencyAreas": [
+                        {
+                            "competency": "Test Strategy & Framework Design",
+                            "qualitativeQuestionExamples": [
+                                "Design a comprehensive test automation strategy for a new, complex product that involves multiple microservices, a web UI, and mobile apps. Detail the types of tests, tools, and reporting.",
+                                "Describe your experience building a test automation framework from scratch or significantly evolving an existing one. What architectural patterns did you follow?",
+                                "How do you measure the effectiveness and ROI of test automation efforts? What metrics do you track?",
+                                "Discuss the concept of 'shift-left' testing. How do you implement it within an agile development team?"
+                            ],
+                            "whatInterviewerLooksFor": "Strategic thinking in QA, framework design principles (scalability, maintainability, reusability), strong metrics-driven approach, experience with continuous testing and early feedback."
+                        },
+                        {
+                            "competency": "Performance, Security & Non-Functional Testing",
+                            "qualitativeQuestionExamples": [
+                                "How do you integrate performance testing into the CI/CD pipeline for a large-scale application? What tools and processes do you use for continuous performance monitoring?",
+                                "Describe your experience with security testing (e.g., DAST, SAST, penetration testing concepts) within an automated pipeline. How do you ensure security is built in?",
+                                "What are the challenges and best practices for automating accessibility testing?",
+                                "Discuss strategies for testing for reliability and resilience in distributed systems (e.g., fault injection, chaos testing)."
+                            ],
+                            "whatInterviewerLooksFor": "Broad knowledge of non-functional testing, practical experience with advanced testing types, security awareness, resilience testing techniques."
+                        },
+                        {
+                            "competency": "Emerging Tech & AI in QA",
+                            "qualitativeQuestionExamples": [
+                                "How do you envision the role of a QA Automation Engineer evolving with the increasing adoption of Generative AI and low-code/no-code platforms?",
+                                "Discuss the challenges of testing AI/ML models themselves (e.g., bias detection, adversarial examples, explainability). How would you approach it?",
+                                "What are your thoughts on 'self-healing' test automation? Have you explored tools or techniques in this area?",
+                                "How can AI-powered tools assist in test data generation, anomaly detection in test results, or predictive analytics for test failures?"
+                            ],
+                            "whatInterviewerLooksFor": "Forward-thinking, understanding of AI's dual impact on software (as a feature and as a test target), critical evaluation of new QA tools, ethical considerations in testing AI."
+                        },
+                        {
+                            "competency": "Leadership & Quality Advocacy",
+                            "qualitativeQuestionExamples": [
+                                "Tell me about a time you had to champion a significant change in testing practices or introduce a new automation tool across multiple teams. How did you gain buy-in?",
+                                "How do you foster a 'quality-first' mindset within a development team, not just within QA?",
+                                "Describe your approach to mentoring and coaching junior automation engineers.",
+                                "How do you manage conflicting priorities between development speed and quality assurance goals?"
+                            ],
+                            "whatInterviewerLooksFor": "Strong advocacy for quality, leadership and influencing skills, ability to drive cultural change, mentorship, conflict resolution, strategic balancing of priorities."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "UX/UI Designer",
+            "levels": [
+                {
+                    "level": "Junior",
+                    "competencyAreas": [
+                        {
+                            "competency": "Design Fundamentals & Tools",
+                            "qualitativeQuestionExamples": [
+                                "Explain the difference between User Experience (UX) and User Interface (UI) design. How do they relate?",
+                                "Walk me through your process for designing a simple mobile app screen (e.g., a login page). What steps do you take from concept to a basic wireframe?",
+                                "What are some common UI design principles (e.g., hierarchy, consistency, feedback)? How do you apply them?",
+                                "Describe your experience using design tools like Figma, Sketch, or Adobe XD. What do you like about your preferred tool?"
+                            ],
+                            "whatInterviewerLooksFor": "Clear understanding of UX/UI distinction, systematic design process, knowledge of fundamental design principles, tool proficiency."
+                        },
+                        {
+                            "competency": "User Empathy & Basic Research",
+                            "qualitativeQuestionExamples": [
+                                "Why is understanding the user important in design? How do you try to understand users at this stage?",
+                                "Tell me about a time you designed something that turned out to be confusing or difficult for users. What did you learn from it?",
+                                "Describe a small piece of research (e.g., competitor analysis, informal user interviews) you conducted for a design project. What insights did you gain?"
+                            ],
+                            "whatInterviewerLooksFor": "User-centric mindset, willingness to learn from failures, basic research curiosity, empathy for users."
+                        }
+                    ]
+                },
+                {
+                    "level": "Mid-Level",
+                    "competencyAreas": [
+                        {
+                            "competency": "User Research & Information Architecture",
+                            "qualitativeQuestionExamples": [
+                                "Describe your typical user research process for a new feature or product. What methodologies do you employ (e.g., surveys, interviews, usability testing) and why?",
+                                "How do you translate user research findings into actionable design decisions?",
+                                "You're redesigning the navigation for a complex website. Walk me through your approach to information architecture and user flow design."
+                            ],
+                            "whatInterviewerLooksFor": "Proficiency in various user research methods, ability to synthesize research into insights, strong information architecture skills, user flow mapping."
+                        },
+                        {
+                            "competency": "Interaction Design & Prototyping",
+                            "qualitativeQuestionExamples": [
+                                "Tell me about a challenging interaction design problem you've solved. How did you approach it, and what was the outcome?",
+                                "Describe your prototyping process. What fidelity of prototypes do you create at different stages of design, and why?",
+                                "How do you ensure consistency in UI components and interactions across a product or multiple products?"
+                            ],
+                            "whatInterviewerLooksFor": "Problem-solving through interaction design, prototyping skills (low to high fidelity), attention to detail, understanding of design systems concepts."
+                        },
+                        {
+                            "competency": "Emerging Tech & User Experience",
+                            "qualitativeQuestionExamples": [
+                                "How can AI/ML (e.g., for personalization, content generation, smart search) be integrated into a user interface to create a more intelligent or adaptive user experience? What are the UX challenges?",
+                                "Discuss the concept of 'voice user interfaces' (VUIs) or 'conversational AI'. How do you approach designing for these new interaction paradigms?",
+                                "What are your thoughts on designing for AR/VR or spatial computing experiences? Have you explored any specific UX principles for these environments?",
+                                "How do you design for accessibility, especially with the rise of new digital interfaces and AI-powered features?"
+                            ],
+                            "whatInterviewerLooksFor": "Curiosity about emerging tech's UX implications, ability to think beyond traditional screens, understanding of new interaction models, commitment to inclusive design for novel interfaces."
+                        }
+                    ]
+                },
+                {
+                    "level": "Senior/Lead",
+                    "competencyAreas": [
+                        {
+                            "competency": "UX/UI Strategy & Vision",
+                            "qualitativeQuestionExamples": [
+                                "Design a UX strategy for a product or feature that aims to capture a new market segment or solve a complex user problem. How do you define success?",
+                                "Describe your experience creating or driving a design system within an organization. What were the challenges, and how did you ensure its adoption and evolution?",
+                                "How do you balance user needs with business goals and technical constraints when making strategic design decisions?",
+                                "Tell me about a time you successfully advocated for significant user experience improvements that required substantial engineering effort. How did you build your case?"
+                            ],
+                            "whatInterviewerLooksFor": "Strategic thinking, holistic design approach, experience with design systems, business acumen, ability to influence stakeholders, data-driven design justification."
+                        },
+                        {
+                            "competency": "Leadership & Cross-Functional Collaboration",
+                            "qualitativeQuestionExamples": [
+                                "How do you foster a user-centered design culture within an engineering-driven organization?",
+                                "Describe your approach to mentoring and guiding other designers on your team.",
+                                "Tell me about a time you had to navigate a conflict between product, engineering, and design on a critical feature. How did you facilitate resolution?",
+                                "How do you manage expectations and communicate complex design decisions or user research findings to executives?"
+                            ],
+                            "whatInterviewerLooksFor": "Leadership skills, collaborative mindset, conflict resolution, strong communication (especially visual storytelling), empathy for other disciplines."
+                        },
+                        {
+                            "competency": "Emerging Tech & Future of Design",
+                            "qualitativeQuestionExamples": [
+                                "How do you envision Generative AI transforming the design process itself (e.g., automated layout, content generation, design variations)? What are the ethical and workflow implications?",
+                                "Discuss the challenges and opportunities of designing for increasingly immersive experiences (e.g., Metaverse, VR/AR applications). What new design paradigms emerge?",
+                                "What are your thoughts on designing for a multi-modal future (e.g., voice, gesture, haptics, traditional UI)? How do you ensure a cohesive experience?",
+                                "How do you approach designing for user trust and transparency when AI is heavily integrated into a product's functionality?",
+                                "What's your vision for the future of human-computer interaction and how designers will shape it?"
+                            ],
+                            "whatInterviewerLooksFor": "Visionary thinking, adaptability to new interfaces, ethical design considerations for AI, ability to articulate future trends and their design impact, thought leadership."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "Product Manager",
+            "levels": [
+                {
+                    "level": "Junior",
+                    "competencyAreas": [
+                        {
+                            "competency": "Product Fundamentals & User Focus",
+                            "qualitativeQuestionExamples": [
+                                "What do you believe are the core responsibilities of a Product Manager? How do you define a 'good' product?",
+                                "Describe a product you use and love. What makes it great from a user perspective, and how might you improve it?",
+                                "How do you gather user feedback for a new feature or a small product? What questions would you ask?"
+                            ],
+                            "whatInterviewerLooksFor": "Understanding of the PM role, user empathy, critical product analysis, curiosity about user needs, foundational user research skills."
+                        },
+                        {
+                            "competency": "Communication & Execution",
+                            "qualitativeQuestionExamples": [
+                                "Tell me about a time you had to clearly communicate an idea or requirement to a technical team. How did you ensure they understood?",
+                                "Describe a small project or initiative you managed from start to finish. What steps did you take?",
+                                "How do you prioritize your tasks when you have multiple things to do?"
+                            ],
+                            "whatInterviewerLooksFor": "Clear communication, organizational skills, ability to break down problems, basic prioritization."
+                        }
+                    ]
+                },
+                {
+                    "level": "Mid-Level",
+                    "competencyAreas": [
+                        {
+                            "competency": "Product Strategy & Roadmap Development",
+                            "qualitativeQuestionExamples": [
+                                "Imagine you're the PM for [a specific product area, e.g., 'search functionality' within an e-commerce platform]. How would you go about defining the product vision and developing a roadmap for the next 6-12 months?",
+                                "How do you balance short-term tactical needs with long-term strategic goals when prioritizing features for a product roadmap?",
+                                "Describe a time you used data (qualitative or quantitative) to make a significant product decision. Walk me through your analysis and the outcome."
+                            ],
+                            "whatInterviewerLooksFor": "Strategic thinking, ability to define vision, roadmap planning, data-driven decision making, understanding of trade-offs."
+                        },
+                        {
+                            "competency": "Execution & Cross-Functional Leadership",
+                            "qualitativeQuestionExamples": [
+                                "Walk me through the process of launching a new product feature from conception to release. What are your key responsibilities at each stage, and how do you collaborate with engineering, design, and marketing?",
+                                "Tell me about a time you had a significant disagreement with engineering or design on a product decision. How did you navigate it, and what was the resolution?",
+                                "How do you define success for a new product feature? What metrics would you track, and how would you know if it's successful?"
+                            ],
+                            "whatInterviewerLooksFor": "End-to-end product lifecycle management, strong collaboration skills, conflict resolution, understanding of team dynamics, clear definition of success metrics, post-launch analysis."
+                        },
+                        {
+                            "competency": "Market & Competitive Analysis",
+                            "qualitativeQuestionExamples": [
+                                "How do you stay informed about market trends, competitor activities, and user needs in your product area?",
+                                "Describe a time you identified a new market opportunity or a significant competitive threat. What was your analysis, and what actions did you recommend?",
+                                "What are some common product frameworks (e.g., Jobs-to-be-Done, JTBD, Lean Startup, Agile) you've applied, and how did they help your product development?"
+                            ],
+                            "whatInterviewerLooksFor": "Market awareness, analytical skills, strategic thinking, understanding of product frameworks, ability to identify opportunities/threats."
+                        },
+                        {
+                            "competency": "Emerging Tech & Product Innovation",
+                            "qualitativeQuestionExamples": [
+                                "How do you identify whether an emerging technology (e.g., Generative AI, Web3, IoT) is a hype or a genuine opportunity for your product? Describe your evaluation process.",
+                                "Imagine you're building a new product that heavily leverages AI. What are the unique product management challenges related to explainability, bias, and ethical use of AI?",
+                                "How would you approach integrating a 'smart' or 'personalized' feature driven by machine learning into an existing product? What user experience challenges would you anticipate?",
+                                "Discuss the potential of blockchain or decentralized technologies to create new product categories or enhance existing ones. When might you consider it for a product?"
+                            ],
+                            "whatInterviewerLooksFor": "Curiosity about emerging tech, ability to evaluate new tech for product fit, understanding of ethical AI in products, user experience considerations for AI-driven features, awareness of decentralized tech potential."
+                        }
+                    ]
+                },
+                {
+                    "level": "Senior/Lead",
+                    "competencyAreas": [
+                        {
+                            "competency": "Product Leadership & Portfolio Strategy",
+                            "qualitativeQuestionExamples": [
+                                "Describe your experience defining and communicating a multi-year product strategy for a significant product line or an entire product portfolio. How do you align it with overall company vision and business objectives?",
+                                "How do you identify and mitigate strategic risks for your product(s) (e.g., market shifts, competitive disruption, technological obsolescence)?",
+                                "Tell me about a time you had to pivot a product strategy significantly due to changing market conditions or unexpected user feedback. What was your process?",
+                                "How do you foster a culture of product excellence, customer obsession, and innovation within your product teams?"
+                            ],
+                            "whatInterviewerLooksFor": "Strategic vision, leadership presence, risk management, adaptability, strong product culture building, ability to inspire teams."
+                        },
+                        {
+                            "competency": "Executive Influence & Stakeholder Management",
+                            "qualitativeQuestionExamples": [
+                                "Describe a situation where you had to influence executive leadership to invest in a major product initiative that required significant resources. How did you build and present your business case?",
+                                "How do you manage complex stakeholder relationships across different departments (e.g., sales, legal, operations) for a large-scale product launch or a critical feature?",
+                                "Tell me about a time you had to deliver difficult news (e.g., product sunsetting, feature delay) to customers or internal teams. How did you handle it?"
+                            ],
+                            "whatInterviewerLooksFor": "Executive communication, negotiation skills, conflict resolution, crisis communication, ability to build consensus, political savvy."
+                        },
+                        {
+                            "competency": "Emerging Tech Product Vision & Go-to-Market",
+                            "qualitativeQuestionExamples": [
+                                "What's your vision for how Generative AI will reshape the industry our company operates in? How would you develop a product strategy to leverage it, and what would be your go-to-market plan?",
+                                "Discuss the challenges and opportunities of building products that incorporate cutting-edge research in AI (e.g., explainable AI, foundation models) while ensuring market readiness and user adoption.",
+                                "How do you evaluate potential partners or acquisitions that offer new technological capabilities (e.g., specialized AI models, blockchain infrastructure)?",
+                                "What are your thoughts on building products for the decentralized web (Web3)? What are the unique challenges and opportunities from a product perspective (e.g., tokenomics, community governance)?",
+                                "How do you define and measure 'success' for an AI-powered product, considering its probabilistic nature and potential for bias?"
+                            ],
+                            "whatInterviewerLooksFor": "Visionary leadership, ability to translate complex tech into product strategy, GTM expertise for innovative products, strategic partnerships, understanding of new business models (tokenomics), ethical product development."
+                        },
+                        {
+                            "competency": "Talent Development & Team Building",
+                            "qualitativeQuestionExamples": [
+                                "How do you recruit, retain, and develop high-performing product management talent?",
+                                "Describe your experience scaling a product organization. What were the key challenges and solutions?",
+                                "What's your philosophy on mentoring junior product managers and fostering their growth?",
+                                "How do you empower product teams to take ownership and innovate autonomously?"
+                            ],
+                            "whatInterviewerLooksFor": "Proven track record of building and developing teams, organizational scaling, mentorship skills, empowerment, delegation, fostering a growth mindset."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "Data Engineer",
+            "levels": [
+                {
+                    "level": "Junior",
+                    "competencyAreas": [
+                        {
+                            "competency": "SQL & Relational Databases",
+                            "qualitativeQuestionExamples": [
+                                "Explain the concepts of `PRIMARY KEY` and `FOREIGN KEY` in a relational database. Why are they important?",
+                                "Write a SQL query to join two tables and filter results based on a condition.",
+                                "Describe a time you had to retrieve specific data from a database for a report or analysis. What steps did you take?"
+                            ],
+                            "whatInterviewerLooksFor": "Strong SQL fundamentals, understanding of relational database concepts, ability to extract and manipulate data."
+                        },
+                        {
+                            "competency": "Data Formats & Basic ETL",
+                            "qualitativeQuestionExamples": [
+                                "What's the difference between CSV and JSON data formats? When would you use each?",
+                                "Describe a simple process you might follow to extract data from one source, transform it (e.g., clean, reformat), and load it into another (ETL).",
+                                "Tell me about a time you worked with a messy dataset. How did you clean or prepare it for use?"
+                            ],
+                            "whatInterviewerLooksFor": "Familiarity with common data formats, basic ETL understanding, data cleaning and quality awareness."
+                        }
+                    ]
+                },
+                {
+                    "level": "Mid-Level",
+                    "competencyAreas": [
+                        {
+                            "competency": "Data Pipeline Design & Implementation",
+                            "qualitativeQuestionExamples": [
+                                "Design a data pipeline to ingest streaming data from an IoT device, process it, and store it for analytics. What technologies would you consider, and why?",
+                                "Describe your experience with a data orchestration tool (e.g., Apache Airflow, Prefect). Walk me through a DAG you've built.",
+                                "How do you ensure data quality and reliability throughout a data pipeline? What mechanisms do you put in place?",
+                                "Discuss the trade-offs between batch processing and stream processing. When would you use each?"
+                            ],
+                            "whatInterviewerLooksFor": "Ability to design data pipelines, knowledge of orchestration tools, data quality assurance, understanding of batch vs. stream processing, technology selection rationale."
+                        },
+                        {
+                            "competency": "Big Data Technologies & Cloud Data Services",
+                            "qualitativeQuestionExamples": [
+                                "Have you worked with distributed data processing frameworks like Apache Spark or Hadoop? Describe a problem you solved using one of them.",
+                                "What are the differences between a 'data lake' and a 'data warehouse'? When would you use each, and how do they complement each other?",
+                                "Describe your experience with cloud-native data services (e.g., AWS S3, EMR, Athena; Azure Data Lake, Databricks; GCP BigQuery, Dataflow). What are their advantages?",
+                                "How do you optimize the performance of large-scale data queries and transformations in a distributed environment?"
+                            ],
+                            "whatInterviewerLooksFor": "Experience with big data technologies, understanding of data lake/warehouse concepts, proficiency with cloud data services, performance tuning for large datasets."
+                        },
+                        {
+                            "competency": "Data Modeling & Schema Design",
+                            "qualitativeQuestionExamples": [
+                                "Explain the difference between Star Schema and Snowflake Schema in data warehousing. When would you use one over the other?",
+                                "How do you handle 'slowly changing dimensions' in a data warehouse?",
+                                "Describe your process for designing a data model for a new analytics requirement."
+                            ],
+                            "whatInterviewerLooksFor": "Data modeling expertise, understanding of dimensional modeling, practical experience with SCDs."
+                        },
+                        {
+                            "competency": "Emerging Tech & Data Governance",
+                            "qualitativeQuestionExamples": [
+                                "How do you approach ensuring data security and privacy (e.g., PII masking, access controls) in your data pipelines and data stores?",
+                                "Discuss the concept of a 'Data Mesh' or 'Data Fabric'. How might this architectural paradigm impact data engineering practices?",
+                                "How can AI/ML (e.g., for data quality, anomaly detection, metadata management) be leveraged in data engineering workflows?",
+                                "What are the challenges of processing and managing real-time data for AI/ML model training or inference?"
+                            ],
+                            "whatInterviewerLooksFor": "Data governance awareness, understanding of modern data architectures (mesh/fabric), application of AI/ML to data operations, challenges of real-time data for AI."
+                        }
+                    ]
+                },
+                {
+                    "level": "Senior/Lead/Architect",
+                    "competencyAreas": [
+                        {
+                            "competency": "Enterprise Data Architecture & Strategy",
+                            "qualitativeQuestionExamples": [
+                                "Design an end-to-end data platform for a large enterprise, handling diverse data sources, real-time analytics, and machine learning workloads. Detail your architectural choices, including data ingestion, storage, processing, and consumption layers.",
+                                "How do you define a data strategy that aligns with overall business goals and enables advanced analytics and AI initiatives?",
+                                "Describe your experience migrating legacy data systems to modern cloud-native data platforms. What were the biggest technical and organizational challenges?",
+                                "How do you establish and enforce data governance policies (e.g., data quality, lineage, access control) across a complex data ecosystem?"
+                            ],
+                            "whatInterviewerLooksFor": "Strategic data architecture, ability to define data vision, large-scale data migration experience, deep understanding of data governance, data security, and compliance."
+                        },
+                        {
+                            "competency": "Optimizing & Scaling Data Systems",
+                            "qualitativeQuestionExamples": [
+                                "How do you approach performance optimization and cost management for petabyte-scale data processing workloads in the cloud?",
+                                "Discuss advanced concepts in distributed data processing (e.g., fault tolerance, concurrency control, consistency models) and how you apply them.",
+                                "Tell me about a time you designed a data pipeline that handled extreme peak loads or unexpected data volume spikes. How did you ensure resilience?",
+                                "How do you manage schema evolution and data versioning in a large, continuously evolving data lake or data warehouse?"
+                            ],
+                            "whatInterviewerLooksFor": "Expertise in distributed computing, performance and cost optimization at scale, resilience engineering for data systems, schema management in complex environments."
+                        },
+                        {
+                            "competency": "Emerging Tech & Future of Data",
+                            "qualitativeQuestionExamples": [
+                                "What's your vision for the future of data engineering given the rise of Generative AI, real-time analytics, and privacy-enhancing technologies?",
+                                "How do you incorporate data streaming platforms (e.g., Kafka, Flink) into a modern data architecture for real-time insights and AI model serving?",
+                                "Discuss the role of 'data contracts' or 'data products' in enabling a Data Mesh architecture. What are the implementation challenges?",
+                                "How do you evaluate and integrate new data technologies (e.g., new database types, specialized analytics engines, data observability tools) into an existing data platform?",
+                                "What are the ethical considerations and best practices for responsible data collection, processing, and usage, especially when feeding into AI systems?"
+                            ],
+                            "whatInterviewerLooksFor": "Visionary perspective, deep knowledge of streaming, understanding of modern data architectural paradigms, critical evaluation of new tech, strong ethical stance on data."
+                        },
+                        {
+                            "competency": "Leadership & Mentorship",
+                            "qualitativeQuestionExamples": [
+                                "Tell me about a time you mentored a junior data engineer who was struggling with a complex data integration problem.",
+                                "How do you build and scale a high-performing data engineering team? What qualities do you prioritize?",
+                                "Describe your approach to communicating complex data architecture decisions or data quality issues to non-technical stakeholders or executives.",
+                                "How do you foster a culture of data ownership and quality within development and business teams?",
+                                "What's your philosophy on technical debt in data pipelines, and how do you manage it strategically?"
+                            ],
+                            "whatInterviewerLooksFor": "Proven leadership, mentorship skills, ability to build strong data teams, strong communication (technical and business), advocacy for data quality, strategic debt management."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "Machine Learning Engineer",
+            "levels": [
+                {
+                    "level": "Junior",
+                    "competencyAreas": [
+                        {
+                            "competency": "ML Fundamentals & Python/Math",
+                            "qualitativeQuestionExamples": [
+                                "Explain what a 'feature' is in machine learning. How do you go about creating new features from raw data?",
+                                "Describe the difference between classification and regression. Give an example of a real-world problem for each.",
+                                "Walk me through a simple machine learning project you've completed (e.g., predicting house prices, classifying images). What were the steps?",
+                                "What is basic linear algebra or calculus concept that is foundational to an ML algorithm (e.g., gradients for optimization)? Explain it simply."
+                            ],
+                            "whatInterviewerLooksFor": "Understanding of basic ML concepts, feature engineering intuition, project lifecycle awareness, foundational math skills relevant to ML."
+                        },
+                        {
+                            "competency": "Data Handling & Experimentation",
+                            "qualitativeQuestionExamples": [
+                                "How do you handle missing data or outliers in a dataset before training an ML model?",
+                                "What is cross-validation? Why is it important in model evaluation?",
+                                "Describe a time you used a pre-trained model (e.g., from a library like scikit-learn or a simple neural network from TensorFlow/PyTorch). What was its purpose?"
+                            ],
+                            "whatInterviewerLooksFor": "Data preprocessing skills, understanding of robust evaluation techniques, familiarity with ML libraries, basic model application."
+                        }
+                    ]
+                },
+                {
+                    "level": "Mid-Level",
+                    "competencyAreas": [
+                        {
+                            "competency": "Model Training & Optimization",
+                            "qualitativeQuestionExamples": [
+                                "Explain the concept of backpropagation in neural networks. Why is it important for training deep learning models?",
+                                "Discuss different regularization techniques (e.g., L1, L2, Dropout) and when to use them to prevent overfitting.",
+                                "How do you choose between different optimization algorithms (e.g., SGD, Adam, RMSprop) for a deep learning model? What are their trade-offs?",
+                                "Describe a project where you significantly improved the performance or accuracy of a machine learning model. What techniques did you use?"
+                            ],
+                            "whatInterviewerLooksFor": "Deep understanding of ML/DL training processes, knowledge of optimization techniques, practical experience in model tuning and improvement."
+                        },
+                        {
+                            "competency": "MLOps & Productionization",
+                            "qualitativeQuestionExamples": [
+                                "Walk me through the process of taking a trained machine learning model from a development environment to production. What are the key stages and challenges?",
+                                "How do you monitor the performance and health of a deployed ML model in real-time? What are the common issues you'd look for (e.g., data drift, concept drift)?",
+                                "Describe your experience with MLOps tools or platforms (e.g., MLflow, Kubeflow, Sagemaker, Vertex AI). What problem did they solve for you?",
+                                "How do you ensure the reproducibility of your machine learning experiments and models?"
+                            ],
+                            "whatInterviewerLooksFor": "Practical MLOps experience, understanding of model lifecycle management, monitoring strategies for ML, reproducibility best practices."
+                        },
+                        {
+                            "competency": "Emerging Tech & AI Application",
+                            "qualitativeQuestionExamples": [
+                                "Have you worked with Large Language Models (LLMs) or Generative AI (e.g., fine-tuning, prompt engineering, using APIs)? Describe a project or use case.",
+                                "Discuss the concept of 'transfer learning' and 'fine-tuning' for deep learning models. When is it applicable, and what are its benefits?",
+                                "How do you approach data collection and annotation for specialized machine learning tasks (e.g., computer vision, natural language processing)?",
+                                "What are the challenges of deploying real-time inference for large AI models, and what solutions have you explored (e.g., model compression, specialized hardware)?"
+                            ],
+                            "whatInterviewerLooksFor": "Experience with LLMs/Generative AI, understanding of advanced ML techniques (transfer learning), data strategy for specific ML domains, awareness of inference optimization."
+                        }
+                    ]
+                },
+                {
+                    "level": "Senior/Lead",
+                    "competencyAreas": [
+                        {
+                            "competency": "ML System Architecture & Scalability",
+                            "qualitativeQuestionExamples": [
+                                "Design a scalable and fault-tolerant machine learning platform that can serve multiple models, handle real-time predictions, and manage continuous retraining. Detail the infrastructure, data pipelines, and deployment strategies.",
+                                "How do you choose between a monolithic model architecture and an ensemble of smaller models for a complex problem? Discuss the trade-offs.",
+                                "Describe your experience with federated learning or privacy-preserving AI techniques. When might these be necessary, and what are the implementation challenges?",
+                                "How do you approach ensuring fairness and mitigating bias in machine learning models, especially in high-stakes applications? Provide concrete examples."
+                            ],
+                            "whatInterviewerLooksFor": "Architectural thinking for ML systems, advanced model design, expertise in privacy-preserving ML, strong commitment to ethical AI and bias mitigation."
+                        },
+                        {
+                            "competency": "ML Strategy & Research to Production",
+                            "qualitativeQuestionExamples": [
+                                "How do you translate business problems into machine learning opportunities and define a measurable ML roadmap?",
+                                "Tell me about a time you led an ML project from initial research and prototyping through to successful production deployment at scale. What were the biggest hurdles?",
+                                "How do you evaluate new research papers or cutting-edge ML techniques for their practical applicability and business value?",
+                                "Discuss your experience building and leading a team of ML engineers. What qualities do you look for, and how do you foster innovation?"
+                            ],
+                            "whatInterviewerLooksFor": "Strategic ML thinking, ability to bridge research and production, critical evaluation of new research, strong leadership and team-building skills."
+                        },
+                        {
+                            "competency": "Emerging Tech & Future of AI",
+                            "qualitativeQuestionExamples": [
+                                "What's your perspective on the long-term impact of 'Foundation Models' and their role in the future of AI development? How will it change how we build intelligent systems?",
+                                "How do you prepare for the increasing demands of AI model training and inference in terms of computational resources and specialized hardware (e.g., GPUs, TPUs)?",
+                                "Discuss the challenges and opportunities of building multi-modal AI systems that integrate vision, language, and other data types.",
+                                "What are your thoughts on the regulatory landscape for AI (e.g., AI Act, specific industry regulations) and its implications for ML engineering practices?",
+                                "How do you balance the drive for state-of-the-art model performance with the need for interpretability and transparency in critical applications?"
+                            ],
+                            "whatInterviewerLooksFor": "Visionary thinking, expertise in AI infrastructure, understanding of complex AI paradigms, awareness of regulatory impact, commitment to ethical and transparent AI."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "Data Analyst",
+            "levels": [
+                {
+                    "level": "Junior",
+                    "competencyAreas": [
+                        {
+                            "competency": "Data Extraction & Manipulation (SQL/Spreadsheets)",
+                            "qualitativeQuestionExamples": [
+                                "Describe a time you had to get specific data from a database or a large spreadsheet to answer a question. What steps did you take?",
+                                "You're given a dataset with customer orders. Write a SQL query to find the total revenue for each product category.",
+                                "How do you clean data that has inconsistencies or errors in a spreadsheet?"
+                            ],
+                            "whatInterviewerLooksFor": "Basic SQL proficiency, ability to work with structured data, attention to detail in data cleaning, logical problem-solving."
+                        },
+                        {
+                            "competency": "Data Visualization & Communication",
+                            "qualitativeQuestionExamples": [
+                                "You have a dataset showing sales over time. What type of chart would you use to visualize this, and why?",
+                                "How would you explain a simple data trend (e.g., 'sales are increasing') to someone who isn't familiar with data?",
+                                "Tell me about a time you used data to tell a story or answer a question for someone."
+                            ],
+                            "whatInterviewerLooksFor": "Understanding of basic chart types, ability to explain data clearly, narrative skills with data."
+                        }
+                    ]
+                },
+                {
+                    "level": "Mid-Level",
+                    "competencyAreas": [
+                        {
+                            "competency": "Advanced Data Analysis & Storytelling",
+                            "qualitativeQuestionExamples": [
+                                "You observe a sudden drop in user engagement for a product. Walk me through your process to investigate the root cause using data. What data sources would you look at, and what questions would you ask?",
+                                "Describe a time you uncovered a significant insight from data that was not immediately obvious. How did you find it, and what was its impact?",
+                                "How do you prepare a compelling data presentation for non-technical stakeholders? What elements do you prioritize?",
+                                "What is the difference between correlation and causation? Provide an example of how misinterpreting this could lead to bad business decisions."
+                            ],
+                            "whatInterviewerLooksFor": "Analytical problem-solving, hypothesis testing, advanced data visualization, strong storytelling with data, understanding of statistical concepts."
+                        },
+                        {
+                            "competency": "A/B Testing & Experimentation",
+                            "qualitativeQuestionExamples": [
+                                "You need to analyze the results of an A/B test for a new website layout. What metrics would you focus on, and how would you determine if the new layout is better?",
+                                "Describe a time an A/B test had unexpected results. How did you investigate the discrepancies?",
+                                "How do you ensure the validity of your A/B test results (e.g., avoiding common pitfalls)?"
+                            ],
+                            "whatInterviewerLooksFor": "Practical experience with A/B testing, understanding of statistical significance, ability to debug experimental issues."
+                        },
+                        {
+                            "competency": "Emerging Tools & Data Management",
+                            "qualitativeQuestionExamples": [
+                                "Have you used any business intelligence (BI) tools like Tableau, Power BI, or Looker? Describe a dashboard or report you built and its purpose.",
+                                "How do you ensure data quality and integrity when pulling data from multiple sources for analysis?",
+                                "Discuss how basic AI/ML insights (e.g., from a pre-built model) could enhance your data analysis or reporting."
+                            ],
+                            "whatInterviewerLooksFor": "BI tool proficiency, data quality awareness, curiosity about how AI enhances analytics."
+                        }
+                    ]
+                },
+                {
+                    "level": "Senior/Lead",
+                    "competencyAreas": [
+                        {
+                            "competency": "Strategic Analytics & Business Impact",
+                            "qualitativeQuestionExamples": [
+                                "How do you work with product and business leaders to define key performance indicators (KPIs) and align data analysis with strategic objectives?",
+                                "Describe a time your data analysis directly influenced a major business decision or strategy shift. What was your approach, and what was the outcome?",
+                                "How do you identify new analytical opportunities that can drive significant business value or uncover hidden problems?",
+                                "Discuss your experience building analytical frameworks or data models that serve as a foundation for broader insights across an organization."
+                            ],
+                            "whatInterviewerLooksFor": "Strategic impact, business acumen, ability to influence leadership with data, framework development, proactive problem-solving."
+                        },
+                        {
+                            "competency": "Advanced Analytics & Methodology",
+                            "qualitativeQuestionExamples": [
+                                "You're presented with a complex business problem that requires advanced statistical analysis or predictive modeling (but not full-blown ML engineering). Walk me through your approach, including methodology selection, data requirements, and interpretation.",
+                                "How do you handle complex data integration challenges when combining data from disparate systems for a comprehensive analysis?",
+                                "Describe your experience with experimentation frameworks beyond simple A/B testing (e.g., multi-variate testing, causal inference)."
+                            ],
+                            "whatInterviewerLooksFor": "Advanced statistical knowledge, complex data integration, expertise in experimental design, causal analysis."
+                        },
+                        {
+                            "competency": "Emerging Tech & Data Governance",
+                            "qualitativeQuestionExamples": [
+                                "How do you see Generative AI influencing the role of a Data Analyst (e.g., for automated insights, natural language querying)? What are the opportunities and risks?",
+                                "Discuss the challenges and best practices for ensuring data privacy and ethical use of data in your analytical work, especially with sensitive customer information.",
+                                "How do you leverage real-time data or streaming analytics for faster business insights?",
+                                "What's your approach to using AI/ML-powered data visualization or dashboarding tools?"
+                            ],
+                            "whatInterviewerLooksFor": "Adaptability to AI tools, strong ethical stance on data, real-time analytics experience, understanding of new data visualization paradigms."
+                        },
+                        {
+                            "competency": "Leadership & Data Culture",
+                            "qualitativeQuestionExamples": [
+                                "Tell me about a time you mentored a junior data analyst or fostered a data-driven mindset in a team that wasn't accustomed to it.",
+                                "How do you ensure data quality and trust in the reports and dashboards your team produces?",
+                                "Describe your experience in presenting complex analytical findings to executive leadership or external clients. How do you tailor your message for different audiences?",
+                                "What's your philosophy on building a strong data culture within an organization?"
+                            ],
+                            "whatInterviewerLooksFor": "Leadership and mentorship, data quality advocacy, executive communication, ability to drive data adoption across an organization."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
