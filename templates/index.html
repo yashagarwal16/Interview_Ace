@@ -1,0 +1,929 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview-ACE - Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: white;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .user-name {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .logout-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .logout-btn:hover {
+            background: #c0392b;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .upload-area {
+            border: 3px dashed #ddd;
+            border-radius: 15px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .upload-area:hover, .upload-area.dragover {
+            border-color: #667eea;
+            background: rgba(102, 126, 234, 0.05);
+        }
+
+        .upload-area.file-selected {
+            border-color: #27ae60;
+            background: rgba(39, 174, 96, 0.05);
+        }
+
+        .upload-icon {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .btn-full {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .col {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .profile-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .profile-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background: rgba(102, 126, 234, 0.1);
+            color: #53c75d;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .question-item {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .question-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .question-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .answer-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid #e1e5e9;
+        }
+
+        .answer-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            color: white;
+            font-weight: 600;
+            z-index: 1000;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            max-width: 400px;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification.error {
+            background: #e74c3c;
+        }
+
+        .notification.success {
+            background: #27ae60;
+        }
+
+        .notification.warning {
+            background: #f39c12;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, .3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .manual-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+
+        .manual-link:hover {
+            color: #5a6db8;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 0 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .row {
+                flex-direction: column;
+            }
+            
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                Interview-ACE
+            </div>
+            <div class="user-info">
+                <span class="user-name">Welcome, {{ user }}!</span>
+                <a href="/logout" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div id="hero-section" class="hero">
+            <h1>Interview-ACE</h1>
+            <p>Upload your resume and get personalized interview questions with expert-level answers powered by AI</p>
+        </div>
+
+        <!-- Upload Section -->
+        <div id="upload-section" class="card">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">
+                <i class="fas fa-upload" style="color: #667eea;"></i>
+                Upload Your Resume
+            </h2>
+            
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">
+                    <i class="fas fa-file-upload"></i>
+                </div>
+                <h3 id="upload-text">Choose your resume file</h3>
+                <p style="color: #666; margin-top: 0.5rem;">PDF, DOC, or DOCX files supported • Max 10MB</p>
+                <input type="file" id="resumeFile" accept=".pdf,.doc,.docx" style="display: none;">
+            </div>
+            
+            <div id="file-info" class="hidden" style="margin-top: 1rem; text-align: center;">
+                <i class="fas fa-check-circle" style="color: #27ae60; margin-right: 0.5rem;"></i>
+                <span id="file-name"></span>
+            </div>
+            
+            <button id="analyzeBtn" class="btn btn-full" style="margin-top: 2rem;" disabled>
+                <span class="btn-text">
+                    <i class="fas fa-brain"></i>
+                    Analyze Resume
+                </span>
+                <span class="loading hidden"></span>
+            </button>
+            
+            <div class="text-center" style="margin-top: 1rem;">
+                <p style="color: #666;">Don't have a resume ready?</p>
+                <a href="#" class="manual-link" onclick="showManualInput()">Enter details manually instead</a>
+            </div>
+        </div>
+
+        <!-- Manual Input Section -->
+        <div id="manual-section" class="card hidden">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">
+                <i class="fas fa-user-edit" style="color: #667eea;"></i>
+                Complete Your Profile
+            </h2>
+            
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="manualName">Full Name *</label>
+                        <input type="text" id="manualName" class="form-control" placeholder="Enter your full name" required>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="manualEmail">Email</label>
+                        <input type="email" id="manualEmail" class="form-control" placeholder="Enter your email">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="manualSkills"><strong>Skills</strong></label>
+                <textarea id="manualSkills" class="form-control" placeholder="e.g., Python, JavaScript, SQL, Machine Learning" style="height: 100px; resize: none;" spellcheck="false"></textarea>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="manualRole">Role *</label>
+                        <select id="manualRole" class="form-control" required>
+                            <option value="">Select a role</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="manualLevel">Experience Level *</label>
+                        <select id="manualLevel" class="form-control" required>
+                            <option value="">Select experience level</option>
+                            <option value="Junior">Junior</option>
+                            <option value="Mid-Level">Mid-Level</option>
+                            <option value="Senior/Lead/Architect">Senior/Lead/Architect</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row" style="margin-top: 2rem;">
+                <div class="col">
+                    <button onclick="showUploadSection()" class="btn btn-secondary btn-full">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Upload
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="submitManualBtn" class="btn btn-full">
+                        <span class="btn-text">
+                            <i class="fas fa-magic"></i>
+                            Generate Questions
+                        </span>
+                        <span class="loading hidden"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results-section" class="hidden">
+            <!-- Profile Summary -->
+            <div class="profile-section">
+                <h2 style="text-align: center; margin-bottom: 1rem;">
+                    <i class="fas fa-user-circle"></i>
+                    Profile Summary
+                </h2>
+                <div class="profile-grid" id="profileGrid">
+                    <!-- Profile items will be inserted here -->
+                </div>
+                <div id="skillsContainer" class="hidden">
+                    <h4 style="margin-top: 2rem; margin-bottom: 1rem;">
+                        <i class="fas fa-cogs"></i>
+                        Skills
+                    </h4>
+                    <div class="skills-list" id="skillsList">
+                        <!-- Skills will be inserted here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Questions and Answers -->
+            <div class="card">
+                <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">
+                    <i class="fas fa-question-circle" style="color: #667eea;"></i>
+                    Interview Questions & Model Answers
+                </h2>
+                <div id="questionsContainer">
+                    <!-- Questions will be inserted here -->
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e1e5e9;">
+                    <h3 style="margin-bottom: 1rem; color: #333;">Ready for more practice?</h3>
+                    <p style="color: #666; margin-bottom: 2rem;">Upload another resume or try a different role</p>
+                    <button onclick="resetApp()" class="btn">
+                        <i class="fas fa-redo"></i>
+                        Prepare Another Resume
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global variables
+        let currentStep = 'upload';
+        const roles = [
+            'Data Scientist',
+            'Software Engineer (Backend)',
+            'Software Engineer (Frontend)', 
+            'DevOps Engineer / Site Reliability Engineer (SRE)',
+            'Cybersecurity Analyst',
+            'QA Automation Engineer',
+            'UX/UI Designer',
+            'Product Manager',
+            'Data Engineer',
+            'Machine Learning Engineer',
+            'Data Analyst'
+        ];
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            populateRoles();
+            setupEventListeners();
+        });
+
+        function populateRoles() {
+            const roleSelect = document.getElementById('manualRole');
+            roles.forEach(role => {
+                const option = document.createElement('option');
+                option.value = role;
+                option.textContent = role;
+                roleSelect.appendChild(option);
+            });
+        }
+
+        function setupEventListeners() {
+            // File upload
+            const uploadArea = document.getElementById('uploadArea');
+            const fileInput = document.getElementById('resumeFile');
+            
+            uploadArea.addEventListener('click', () => fileInput.click());
+            
+            // Drag and drop
+            uploadArea.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadArea.classList.add('dragover');
+            });
+            
+            uploadArea.addEventListener('dragleave', () => {
+                uploadArea.classList.remove('dragover');
+            });
+            
+            uploadArea.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadArea.classList.remove('dragover');
+                const files = e.dataTransfer.files;
+                if (files.length > 0) {
+                    handleFileSelection(files[0]);
+                }
+            });
+            
+            fileInput.addEventListener('change', (e) => {
+                if (e.target.files.length > 0) {
+                    handleFileSelection(e.target.files[0]);
+                }
+            });
+            
+            // Analyze button
+            document.getElementById('analyzeBtn').addEventListener('click', processResume);
+            
+            // Manual submit button
+            document.getElementById('submitManualBtn').addEventListener('click', submitManual);
+        }
+
+        function handleFileSelection(file) {
+            const uploadArea = document.getElementById('uploadArea');
+            const fileInfo = document.getElementById('file-info');
+            const fileName = document.getElementById('file-name');
+            const analyzeBtn = document.getElementById('analyzeBtn');
+            
+            // Validate file type
+            const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+            if (!allowedTypes.includes(file.type)) {
+                showNotification('Invalid file type. Please upload PDF, DOC, or DOCX files only.', 'error');
+                return;
+            }
+            
+            // Validate file size (10MB)
+            if (file.size > 10 * 1024 * 1024) {
+                showNotification('File size too large. Maximum size allowed is 10MB.', 'error');
+                return;
+            }
+            
+            uploadArea.classList.add('file-selected');
+            fileName.textContent = file.name;
+            fileInfo.classList.remove('hidden');
+            analyzeBtn.disabled = false;
+        }
+
+        async function processResume() {
+            const fileInput = document.getElementById('resumeFile');
+            if (!fileInput.files.length) {
+                showNotification('Please select a file first.', 'error');
+                return;
+            }
+            
+            const formData = new FormData();
+            formData.append('resume', fileInput.files[0]);
+            
+            setLoading('analyzeBtn', true);
+            
+            try {
+                const response = await fetch('/process-resume', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    if (data.needsManualInput) {
+                        // Show manual input with pre-filled data
+                        showManualInput(data.info);
+                        showNotification('Please complete your profile details.', 'warning');
+                    } else {
+                        // Show results
+                        showResults(data.info, data.questions);
+                    }
+                } else {
+                    if (data.invalid_file) {
+                        showNotification(data.error, 'error');
+                    } else {
+                        showNotification(data.error || 'Processing failed. Please try again.', 'error');
+                    }
+                }
+            } catch (error) {
+                showNotification('Network error. Please check your connection and try again.', 'error');
+            } finally {
+                setLoading('analyzeBtn', false);
+            }
+        }
+
+        async function submitManual() {
+            const name = document.getElementById('manualName').value.trim();
+            const email = document.getElementById('manualEmail').value.trim();
+            const skills = document.getElementById('manualSkills').value.trim();
+            const role = document.getElementById('manualRole').value;
+            const level = document.getElementById('manualLevel').value;
+            
+            if (!name || !role || !level) {
+                showNotification('Please fill in all required fields.', 'error');
+                return;
+            }
+            
+            const data = {
+                name,
+                email,
+                skills,
+                role,
+                level
+            };
+            
+            setLoading('submitManualBtn', true);
+            
+            try {
+                const response = await fetch('/submit-manual', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    showResults(result.info, result.questions);
+                } else {
+                    showNotification(result.error || 'Processing failed. Please try again.', 'error');
+                }
+            } catch (error) {
+                showNotification('Network error. Please check your connection and try again.', 'error');
+            } finally {
+                setLoading('submitManualBtn', false);
+            }
+        }
+
+        function showManualInput(prefilledData = null) {
+            document.getElementById('upload-section').classList.add('hidden');
+            document.getElementById('manual-section').classList.remove('hidden');
+            document.getElementById('hero-section').classList.add('hidden');
+            
+            if (prefilledData) {
+                if (prefilledData.name && prefilledData.name !== 'Not found') {
+                    document.getElementById('manualName').value = prefilledData.name;
+                }
+                if (prefilledData.email && prefilledData.email !== 'Not found') {
+                    document.getElementById('manualEmail').value = prefilledData.email;
+                }
+                if (prefilledData.skills && prefilledData.skills.length && prefilledData.skills[0] !== 'Not found') {
+                    document.getElementById('manualSkills').value = prefilledData.skills.join(', ');
+                }
+            }
+            
+            currentStep = 'manual';
+        }
+
+        function showUploadSection() {
+            document.getElementById('manual-section').classList.add('hidden');
+            document.getElementById('upload-section').classList.remove('hidden');
+            document.getElementById('hero-section').classList.remove('hidden');
+            currentStep = 'upload';
+        }
+
+        function showResults(info, questions) {
+            // Hide other sections
+            document.getElementById('upload-section').classList.add('hidden');
+            document.getElementById('manual-section').classList.add('hidden');
+            document.getElementById('hero-section').classList.add('hidden');
+            
+            // Show results section
+            document.getElementById('results-section').classList.remove('hidden');
+            
+            // Populate profile
+            populateProfile(info);
+            
+            // Populate questions
+            populateQuestions(questions);
+            
+            currentStep = 'results';
+            
+            showNotification('Interview preparation complete! Review your questions below.', 'success');
+        }
+
+        function populateProfile(info) {
+            const profileGrid = document.getElementById('profileGrid');
+            const skillsList = document.getElementById('skillsList');
+            const skillsContainer = document.getElementById('skillsContainer');
+            
+            profileGrid.innerHTML = `
+                <div class="profile-item">
+                    <i class="fas fa-user" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                    <h4>Name</h4>
+                    <p>${info.name || 'Not provided'}</p>
+                </div>
+                <div class="profile-item">
+                    <i class="fas fa-envelope" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                    <h4>Email</h4>
+                    <p>${info.email || 'Not provided'}</p>
+                </div>
+                <div class="profile-item">
+                    <i class="fas fa-briefcase" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                    <h4>Role</h4>
+                    <p>${info.role}</p>
+                </div>
+                <div class="profile-item">
+                    <i class="fas fa-star" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                    <h4>Level</h4>
+                    <p>${info.level || 'Not specified'}</p>
+                </div>
+            `;
+            
+            if (info.skills && info.skills.length && info.skills[0] !== 'Not found') {
+                skillsContainer.classList.remove('hidden');
+                skillsList.innerHTML = '';
+                info.skills.forEach(skill => {
+                    const skillTag = document.createElement('span');
+                    skillTag.className = 'skill-tag';
+                    skillTag.textContent = skill;
+                    skillsList.appendChild(skillTag);
+                });
+            }
+        }
+
+        function populateQuestions(questions) {
+            const container = document.getElementById('questionsContainer');
+            container.innerHTML = '';
+            
+            questions.forEach((item, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question-item';
+                questionDiv.innerHTML = `
+                    <div class="question-number">${index + 1}</div>
+                    <div class="question-text">${item.question}</div>
+                    <div class="answer-section">
+                        <div class="answer-label">
+                            <i class="fas fa-lightbulb"></i>
+                            AI Model Answer
+                        </div>
+                        <p style="line-height: 1.6; color: #333;">${item.answer.replace(/\n/g, '<br>')}</p>
+                    </div>
+                `;
+                container.appendChild(questionDiv);
+            });
+        }
+
+        function resetApp() {
+            // Reset form
+            document.getElementById('resumeFile').value = '';
+            document.getElementById('manualName').value = '';
+            document.getElementById('manualEmail').value = '';
+            document.getElementById('manualSkills').value = '';
+            document.getElementById('manualRole').value = '';
+            document.getElementById('manualLevel').value = '';
+            
+            // Reset UI
+            document.getElementById('uploadArea').classList.remove('file-selected');
+            document.getElementById('file-info').classList.add('hidden');
+            document.getElementById('analyzeBtn').disabled = true;
+            
+            // Show upload section
+            document.getElementById('results-section').classList.add('hidden');
+            document.getElementById('upload-section').classList.remove('hidden');
+            document.getElementById('hero-section').classList.remove('hidden');
+            
+            currentStep = 'upload';
+        }
+
+        function setLoading(btnId, loading) {
+            const btn = document.getElementById(btnId);
+            const btnText = btn.querySelector('.btn-text');
+            const loadingSpinner = btn.querySelector('.loading');
+            
+            if (loading) {
+                btn.disabled = true;
+                btnText.classList.add('hidden');
+                loadingSpinner.classList.remove('hidden');
+            } else {
+                btn.disabled = false;
+                btnText.classList.remove('hidden');
+                loadingSpinner.classList.add('hidden');
+            }
+        }
+
+        function showNotification(message, type) {
+            // Remove existing notification
+            const existing = document.querySelector('.notification');
+            if (existing) {
+                existing.remove();
+            }
+
+            // Create new notification
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <i class="fas ${type === 'error' ? 'fa-exclamation-circle' : 
+                              type === 'success' ? 'fa-check-circle' : 
+                              'fa-exclamation-triangle'}"></i>
+                ${message}
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Show notification
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+            
+            // Hide notification after 5 seconds
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.remove();
+                    }
+                }, 300);
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

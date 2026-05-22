@@ -1,0 +1,298 @@
+<!-- templates/auth.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interview-ACE</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #667eea;
+      --secondary: #764ba2;
+      --bg-light: #ffffff;
+      --text-dark: #333;
+      --text-light: #fff;
+      --input-border: #e0e0e0;
+      --shadow: rgba(0, 0, 0, 0.15);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: var(--bg-light);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px var(--shadow);
+      max-width: 400px;
+      width: 100%;
+      animation: fadeIn 0.6s ease;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    input {
+      padding: 12px 15px;
+      border: 1.5px solid var(--input-border);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      transition: border-color 0.3s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .btn {
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: var(--text-light);
+      font-weight: bold;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px var(--shadow);
+    }
+
+    .switch-link {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .switch-link button {
+      background: none;
+      border: none;
+      color: var(--primary);
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .password-group {
+      position: relative;
+    }
+
+    .password-toggle {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #999;
+      cursor: pointer;
+    }
+
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2ecc71;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+    }
+
+    .notification.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .notification.error {
+      background: #e74c3c;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        margin: 20px;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1><i class="fas fa-brain"></i> Interview-ACE</h1>
+    <p class="subtitle">Boost your confidence with personalized AI questions</p>
+
+    <!-- Sign In Form -->
+    <form id="loginForm">
+      <label for="signin-email">Email</label>
+      <input type="email" id="signin-email" name="email" required>
+
+      <label for="signin-password">Password</label>
+      <div class="password-group">
+        <input type="password" id="signin-password" name="password" required>
+        <i class="fas fa-eye password-toggle" onclick="togglePassword('signin-password', this)"></i>
+      </div>
+
+      <button type="submit" class="btn">Sign In</button>
+    </form>
+
+    <!-- Sign Up Form -->
+    <form id="registerForm" class="hidden">
+      <label for="signup-name">Full Name</label>
+      <input type="text" id="signup-name" name="name" required>
+
+      <label for="signup-email">Email</label>
+      <input type="email" id="signup-email" name="email" required>
+
+      <label for="signup-password">Password</label>
+      <div class="password-group">
+        <input type="password" id="signup-password" name="password" required minlength="6">
+        <i class="fas fa-eye password-toggle" onclick="togglePassword('signup-password', this)"></i>
+      </div>
+
+      <button type="submit" class="btn">Sign Up</button>
+    </form>
+
+    <div class="switch-link">
+      <p id="toggle-link">
+        Don’t have an account? <button onclick="switchToSignup()">Sign Up</button>
+      </p>
+    </div>
+  </div>
+
+  <div id="notification" class="notification"></div>
+
+  <script>
+    const loginForm = document.getElementById("loginForm");
+    const registerForm = document.getElementById("registerForm");
+    const toggleLink = document.getElementById("toggle-link");
+    const notification = document.getElementById("notification");
+
+    function switchToSignup() {
+      loginForm.classList.add("hidden");
+      registerForm.classList.remove("hidden");
+      toggleLink.innerHTML = 'Already have an account? <button onclick="switchToSignin()">Sign In</button>';
+    }
+
+    function switchToSignin() {
+      registerForm.classList.add("hidden");
+      loginForm.classList.remove("hidden");
+      toggleLink.innerHTML = 'Don’t have an account? <button onclick="switchToSignup()">Sign Up</button>';
+    }
+
+    function togglePassword(inputId, icon) {
+      const input = document.getElementById(inputId);
+      const isPassword = input.type === "password";
+      input.type = isPassword ? "text" : "password";
+      icon.classList.toggle("fa-eye");
+      icon.classList.toggle("fa-eye-slash");
+    }
+
+    function showNotification(message, isError = false) {
+      notification.textContent = message;
+      notification.className = `notification show ${isError ? "error" : ""}`;
+      setTimeout(() => {
+        notification.classList.remove("show");
+      }, 4000);
+    }
+
+    loginForm.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const email = document.getElementById("signin-email").value;
+      const password = document.getElementById("signin-password").value;
+      try {
+        const res = await fetch("/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password }),
+        });
+        const data = await res.json();
+        if (data.success) {
+          showNotification("Login successful!");
+          setTimeout(() => (window.location.href = "/"), 1000);
+        } else {
+          showNotification(data.message || "Login failed", true);
+        }
+      } catch {
+        showNotification("Network error", true);
+      }
+    });
+
+    registerForm.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const name = document.getElementById("signup-name").value;
+      const email = document.getElementById("signup-email").value;
+      const password = document.getElementById("signup-password").value;
+      try {
+        const res = await fetch("/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, password }),
+        });
+        const data = await res.json();
+        if (data.success) {
+          showNotification("Registered successfully!");
+          setTimeout(() => (window.location.href = "/"), 1000);
+        } else {
+          showNotification(data.message || "Signup failed", true);
+        }
+      } catch {
+        showNotification("Network error", true);
+      }
+    });
+  </script>
+</body>
+</html>
